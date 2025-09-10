@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Task App</string>
+    <string name="refresh">Refresh</string>
+    <string name="loading">Loading...</string>
+    <string name="error_loading_tasks">Error loading tasks</string>
+    <string name="no_tasks_found">No tasks found</string>
+    <string name="retry">Retry</string>
+    <string name="task_completed">Completed</string>
+    <string name="task_pending">Pending</string>
+    <string name="error_occurred">An error occurred: %1$s</string>
+</resources>
