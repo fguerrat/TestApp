@@ -35,6 +35,7 @@ class GetCharactersApiUseCase @Inject constructor(
             )
             if(response.isValid && response.data != null){
                 val characterList: List<Character> = response.data.results.map { it.toDomain() }
+                characterRepository.saveCharacters(characterList)
                 return Resource.Success(characterList)
             }else{
                 Resource.Error("Error al obtener los personajes")

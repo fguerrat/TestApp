@@ -5,6 +5,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.lacalera.testapp.presentation.home.HomeRoot
 import com.lacalera.testapp.presentation.home.HomeScreen
 import com.lacalera.testapp.presentation.splash.SplashScreen
 import com.lobito.utilscalera.data.core.navigation.Home
@@ -30,7 +31,7 @@ fun NavigationWrapper(
         }
 
         composable<Home> {
-            HomeScreen()
+            HomeRoot()
         }
     }
 }

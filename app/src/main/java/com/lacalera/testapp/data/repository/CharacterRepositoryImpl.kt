@@ -2,6 +2,7 @@ package com.lacalera.testapp.data.repository
 
 import com.lacalera.testapp.data.local.dao.CharacterDao
 import com.lacalera.testapp.data.local.model.toDomain
+import com.lacalera.testapp.data.local.model.toEntity
 import com.lacalera.testapp.data.remote.model.CharacterResponse
 import com.lacalera.testapp.data.remote.model.ResponseGenericDTO
 import com.lacalera.testapp.data.remote.service.RickandMortyServiceApi
@@ -33,7 +34,10 @@ class CharacterRepositoryImpl @Inject constructor(
     }
 
     override suspend fun getCharactersByLocal(): List<Character> {
-        return characterDao.getTaskPending().map { it.toDomain()}
+        return characterDao.getTaskPending().map { it.toDomain() }
     }
 
+    override suspend fun saveCharacters(characters: List<Character>) {
+        characterDao.insertAll(characters.map { it.toEntity() })
+    }
 }

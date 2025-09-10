@@ -7,7 +7,6 @@ repositories {
     mavenCentral()
     mavenLocal()
     google()
-    jcenter()
     // Repositorio de SAP con protocolo inseguro permitido
 
 //    maven {
