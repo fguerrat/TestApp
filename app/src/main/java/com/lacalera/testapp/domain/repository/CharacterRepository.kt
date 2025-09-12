@@ -15,4 +15,6 @@ interface CharacterRepository {
     ): ResponseGenericDTO<CharacterResponse>
 
     suspend fun getCharactersByLocal(): List<Character>
+
+    suspend fun saveCharacters(characters: List<Character>)
 }
